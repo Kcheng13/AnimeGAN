@@ -1,0 +1,15 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Training Results
+checkpoint/
+samples/
+logs/
+
+# Data
+dataset/
+results/
+result/
+
+# Jupyter Notebook
+.ipynb_checkpoints

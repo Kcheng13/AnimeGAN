@@ -2,7 +2,7 @@ from AnimeGAN import AnimeGAN
 import argparse
 from tools.utils import *
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+# os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
 
 """parsing and configuration"""
 

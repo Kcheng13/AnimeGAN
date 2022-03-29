@@ -1,6 +1,8 @@
 import argparse
-from tools.utils import *
+from utils import *
 import os
+import sys
+sys.path.insert(1, os.path.abspath("."))
 from net import generator
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
