@@ -123,12 +123,13 @@ class G_net(object):
                 inputs = Conv2DNormLReLU(inputs, 128)
 
             with tf.variable_scope('u1'):
-                inputs = Unsample(inputs,128)    # The number of the filters in this layer is 128 while it is 64 in the graph of the paper. Please refer to the code.
+                inputs = Unsample(inputs,64)    # The number of the filters in this layer is 128 while it is 64 in the graph of the paper. Please refer to the code.
                 inputs = Conv2DNormLReLU(inputs, 64)
                 inputs = Conv2DNormLReLU(inputs, 64)
 
             out = Conv2D(inputs, filters =3, kernel_size=1, strides=1)
             self.fake = tf.tanh(out)
+            # self.fake = tf.sigmoid(out)
 
 
     def InvertedRes_block(self, input, expansion_ratio, output_dim, stride, name, reuse=False, bias=None):
